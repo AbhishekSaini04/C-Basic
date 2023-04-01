@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+int i;
+struct astro{
+char name[20];
+int roll;
+float gpa;
+};
+void funct(struct astro *s){
+for(i=0;i<1;i++){
+printf("The name of Student %d is: %s\n",i+1,s[i].name);
+printf("The gpa of Student %d is: %s\n",i+1,s[i].gpa);
+printf("The roll of Student %d is: %s\n",i+1,s[i].roll);
+}
+}
+int main()
+{
+    struct astro a[3];
+for( i=0;i<1;i++){
+printf("Enter the name of student %d:\n",i+1);
+gets(a[i].name);
+printf("Enter the gpa of student %d:\n",i+1);
+scanf("%f",&a[i].gpa);
+printf("Enter the subjects of student %d:\n",i+1);
+scanf("%d",a[i].roll);
+}
+funct(&a[0]);
+getch();
+return 0;
+}
