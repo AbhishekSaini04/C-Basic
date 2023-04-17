@@ -1,0 +1,45 @@
+#include<stdio.h>
+int i;
+int j;
+int k;
+int l;
+int arrayadd(int arr1[3][3],int arr2[3][3]);
+int main(){
+int arr1[3][3],arr2[3][3],arr3[3][3];
+printf("Please Enter First Matrix!\n");
+for(i=0;i<3;i++){
+    for(j=0;j<3;j++){
+    printf("\t\t\tEnter Matrix element %d:%d\n",i+1,j+1);
+    scanf("%d",&arr1[i][j]);
+    }
+
+}
+printf("Please Enter Second Matrix!\n");
+for(i=0;i<3;i++){
+    for(j=0;j<3;j++){
+    printf("\t\t\tEnter Matrix element %d:%d\n",i+1,j+1);
+    scanf("%d",&arr2[i][j]);
+    }
+
+}
+arrayadd(arr1,arr2);
+    return 0;
+}
+
+int arrayadd(int arr1[3][3],int arr2[3][3])
+{
+int arr[3][3];
+for(i=0;i<3;i++){
+
+for(j=0;j<3;j++){
+arr[i][j]=arr1[i][j]+arr2[i][j];
+}}
+printf("The Resultent Matrix Is:\n");
+for(i=0;i<3;i++){
+    for(j=0;j<3;j++){
+printf("%d\t",arr[i][j]);
+}
+printf("\n");}
+
+return 0;
+}
